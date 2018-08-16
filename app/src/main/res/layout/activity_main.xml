@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    tools:context="com.example.ryan.tipcalculator.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount:"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/_edtAmount"
+            android:hint="Enter Amount"
+            android:layout_weight="2"
+             />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add HST"
+            android:id="@+id/chkHst"
+            android:checked="false"
+            android:layout_weight="1"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tip %"
+            android:layout_weight="0.5"/>
+
+        <Spinner
+            android:contentDescription="Tip %"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="wrap_content"
+            android:entries="@array/Tip"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnTipPercentage">
+
+        </Spinner>
+        <EditText
+            android:paddingTop="20dp"
+            android:id="@+id/edtOtherTip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            android:hint="Enter Tip Percentage"
+            android:layout_weight="2"
+            android:inputType="numberDecimal"
+
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="# of people"
+            />
+
+
+        <Spinner
+            android:entries="@array/numOfPeople"
+            android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/spnNumOfPeople"
+            >
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCalculate"
+            android:layout_weight="2"
+
+            android:text="Calculate"/>
+        <Button
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnClear"
+            android:layout_weight="1"
+            android:text="Clear"/>
+
+    </LinearLayout>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:text="Tip: "
+    android:textSize="24dp"
+    android:visibility="invisible"
+    android:id="@+id/txtTip"/>
+
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:text="Total:"
+    android:textSize="24dp"
+    android:visibility="invisible"
+    android:id="@+id/txtTotal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+
+        android:textSize="24dp"
+        android:visibility="invisible"
+        android:id="@+id/txtTipPerPerson"/>
+
+
+</LinearLayout>
